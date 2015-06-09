@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="filtersApp">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>        
+        <script src="store.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    </head>
+    <body ng-controller="StoreController as store">
+        
+        <h1>{{ 'Movie Catalog' | uppercase }}</h1>
+
+        <h3 class="visible-lg-block">{{ store.longPhrase | limitTo: 110 }}...</h3>
+        <h3 class="visible-md-block">{{ store.longPhrase | limitTo: 90 }}...</h3>
+        <h3 class="visible-sm-block">{{ store.longPhrase | limitTo: 70 }}...</h3>
+        <h3 class="visible-xs-block">{{ store.longPhrase | limitTo: 30 }}...</h3>
+        
+        <div class="alert alert-info">
+            <div class="row">
+                <div class="col-sm-12">
+                    Now: {{ store.now | date:'dd/MM/yyyy HH:mm:ss' }}
+                    <button type="button" class="btn btn-info" ng-click="store.stopClock()">
+                        <span class="glyphicon glyphicon-time"></span>
+                        Stop
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
+                <h3>
+                    {{product.name}}
+                    <em class="pull-right">{{ product.price | currency }}</em>
+                </h3>
+            </li>
+        </ul>
+    </body>
+</html>
