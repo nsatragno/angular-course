@@ -25,6 +25,17 @@ describe('Testing StoreController', function() {
         it('The now time must be now', function() {
             expect(storeController.now).toEqual(new Date());
         });
+        
+        it('Clock is running at the beginning', function() {
+            expect(storeController.clockRunning).toBe(true);
+        });
+    });
+    
+    describe('Clock stop tests', function() {
+        it('When user stop clock, then clockRunning variable must be false', function() {
+            storeController.stopClock();
+            expect(storeController.clockRunning).toBe(false);
+        });
     });
     
 });

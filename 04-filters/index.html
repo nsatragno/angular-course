@@ -18,7 +18,9 @@
             <div class="row">
                 <div class="col-sm-12">
                     Now: {{ store.now | date:'dd/MM/yyyy HH:mm:ss' }}
-                    <button type="button" class="btn btn-info" ng-click="store.stopClock()">
+                    <button type="button" class="btn btn-info"
+                            ng-click="store.stopClock()"
+                            ng-show="store.clockRunning">
                         <span class="glyphicon glyphicon-time"></span>
                         Stop
                     </button>
