@@ -1,0 +1,14 @@
+{
+  "name": "06-forms",
+  "version": "1.0.0",
+  "homepage": "https://github.com/elfrasco/angular-course",
+  "authors": [
+    "Adrian Paredes"
+  ],
+  "description": "Complete example of one form in AngularJS",
+  "dependencies": {
+    "angular": "~1.4.0",
+    "bootstrap": "~3.3.4",
+    "angular-mocks": "~1.4.0"
+  }
+}
