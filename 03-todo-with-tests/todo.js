@@ -4,9 +4,13 @@ angular.module('todoApp', [])
     
         var todoList = this;
     
-        todoList.todos = [
-            { text: 'learn angular', done: true },
-            { text: 'build an angular app', done: false }];
+        todoList.todos = [{
+            text: 'learn angular',
+            done: true
+        }, {
+            text: 'build an angular app',
+            done: false
+        }];
  
         todoList.addTodo = function() {
             todoList.todos.push({
@@ -28,7 +32,9 @@ angular.module('todoApp', [])
             var oldTodos = todoList.todos;
             todoList.todos = [];
             angular.forEach(oldTodos, function(todo) {
-                if (!todo.done) todoList.todos.push(todo);
+                if (!todo.done) {
+                    todoList.todos.push(todo);
+                }
             });
         };
     });
