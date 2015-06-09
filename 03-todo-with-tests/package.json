@@ -1,0 +1,13 @@
+{
+  "name": "03-todo-with-tests",
+  "version": "1.0.0",
+  "description": "An example application using Karma-Jasmine Unit Tests",
+  "author": "Adrian Paredes",
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.36",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "phantomjs": "^1.9.17"
+  }
+}
