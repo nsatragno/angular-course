@@ -7,22 +7,22 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="store.css">
     </head>
-    <body ng-controller="StoreController as store">
+    <body ng-controller="StoreController as storeCtrl">
         
         <h1>{{ 'Video Club' | uppercase }}</h1>
 
-        <h3 class="visible-lg-block">{{ store.longPhrase | limitTo: 110 }}...</h3>
-        <h3 class="visible-md-block">{{ store.longPhrase | limitTo: 90 }}...</h3>
-        <h3 class="visible-sm-block">{{ store.longPhrase | limitTo: 70 }}...</h3>
-        <h3 class="visible-xs-block">{{ store.longPhrase | limitTo: 30 }}...</h3>
+        <h3 class="visible-lg-block">{{ storeCtrl.longPhrase | limitTo: 110 }}...</h3>
+        <h3 class="visible-md-block">{{ storeCtrl.longPhrase | limitTo: 90 }}...</h3>
+        <h3 class="visible-sm-block">{{ storeCtrl.longPhrase | limitTo: 70 }}...</h3>
+        <h3 class="visible-xs-block">{{ storeCtrl.longPhrase | limitTo: 30 }}...</h3>
         
         <div class="alert alert-info">
             <div class="row">
                 <div class="col-sm-12">
-                    Now: {{ store.now | date:'dd/MM/yyyy HH:mm:ss' }}
+                    Now: {{ storeCtrl.now | date:'dd/MM/yyyy HH:mm:ss' }}
                     <button type="button" class="btn btn-info"
-                            ng-click="store.stopClock()"
-                            ng-show="store.clockRunning">
+                            ng-click="storeCtrl.stopClock()"
+                            ng-show="storeCtrl.clockRunning">
                         <span class="glyphicon glyphicon-time"></span>
                         Stop
                     </button>
@@ -31,19 +31,19 @@
         </div>
         
         <ul class="nav nav-pills">
-            <li ng-class="{ active: store.isTabSelected('movies') }">
-                <a href ng-click="store.selectTab('movies')">Movies</a>
+            <li ng-class="{ active: storeCtrl.isTabSelected('movies') }">
+                <a href ng-click="storeCtrl.selectTab('movies')">Movies</a>
             </li>
-            <li ng-class="{ active: store.isTabSelected('frog') }">
-                <a href ng-click="store.selectTab('frog')">Frog</a>
+            <li ng-class="{ active: storeCtrl.isTabSelected('frog') }">
+                <a href ng-click="storeCtrl.selectTab('frog')">Frog</a>
             </li>
-            <li ng-class="{ active: store.isTabSelected('social') }">
-                <a href ng-click="store.selectTab('social')">Social</a>
+            <li ng-class="{ active: storeCtrl.isTabSelected('social') }">
+                <a href ng-click="storeCtrl.selectTab('social')">Social</a>
             </li>
         </ul>
         
-        <ul class="list-group" ng-show="store.isTabSelected('movies')">
-            <li class="list-group-item" ng-repeat="product in store.products | orderBy:'-price'">
+        <ul class="list-group" ng-show="storeCtrl.isTabSelected('movies')">
+            <li class="list-group-item" ng-repeat="product in storeCtrl.products | orderBy:'-price'">
                 <h3>
                     {{product.name}}
                     <em class="pull-right">{{ product.price | currency }}</em>
@@ -51,11 +51,11 @@
             </li>
         </ul>
         
-        <div ng-show="store.isTabSelected('frog')">
+        <div ng-show="storeCtrl.isTabSelected('frog')">
             <img src="rene.gif">
         </div>
         
-        <div ng-show="store.isTabSelected('social')">
+        <div ng-show="storeCtrl.isTabSelected('social')">
             <div class="col-sm-offset-3 col-sm-6">
                 <div class="col-xs-4">
                     <i class="fa fa-facebook-official social"></i>
