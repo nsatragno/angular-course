@@ -8,11 +8,13 @@ app.controller('FormController', function(Scores) {
         formCtrl.comment = {};
         formCtrl.comments = [];
         formCtrl.scores = Scores.query();
+        formCtrl.messages = {};
     };
 
     formCtrl.addComment = function() {            
         formCtrl.comments.push(formCtrl.comment);
         formCtrl.comment = {};
+        formCtrl.messages.info = 'Comment added successfully';
     };
 
 });

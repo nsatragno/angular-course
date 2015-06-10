@@ -36,8 +36,12 @@ describe('Testing FormController', function() {
             expect(formCtrl.comments).toEqual([]);
         });
         
-        it('master of scores shoulb be the expected', function() {
+        it('master of scores should be the expected', function() {
             expect(formCtrl.scores).toEqual(scores);
+        });
+        
+        it('messages should be empty', function() {
+            expect(formCtrl.messages).toEqual({});
         });
         
     });
@@ -66,6 +70,10 @@ describe('Testing FormController', function() {
         
         it('comment should be cleaned', function() {
             expect(formCtrl.comment).toEqual({});
+        });
+        
+        it('messages should contains one message info', function() {
+            expect(formCtrl.messages.info).toBe('Comment added successfully');
         });
         
     });

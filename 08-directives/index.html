@@ -1,17 +1,23 @@
 <!doctype html>
 <html ng-app="formApp">
     <head>
+        <!-- Javascript includes -->
         <script src="bower_components/angular/angular.min.js"></script>        
         <script src="form.js"></script>
         <script src="scores.js"></script>
         <script src="directives/author-input.js"></script>
         <script src="directives/score-input.js"></script>
         <script src="directives/text-input.js"></script>
+        <script src="directives/message.js"></script>
+        
+        <!-- CSS includes -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="form.css">
     </head>
     <body ng-controller="FormController as formCtrl" ng-init="formCtrl.init()">
+        
+        <message ng-model="formCtrl.messages.info" info></message>
         
         <h1>Form Example</h1>
         <div class="page-header"></div>
