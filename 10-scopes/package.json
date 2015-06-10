@@ -1,0 +1,14 @@
+{
+  "name": "10-scopes",
+  "version": "1.0.0",
+  "description": "Complete example that show how $scopes works in AngularJS",
+  "author": "Adrian Paredes",
+  "devDependencies": {
+    "express": "^4.12.4",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.36",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "phantomjs": "^1.9.17"
+  }
+}
