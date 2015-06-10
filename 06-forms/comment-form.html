@@ -1,0 +1,68 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Comment Form</h3>
+    </div>
+    <div class="panel-body">
+
+        <form name="commentForm"
+              ng-submit="formCtrl.addComment()"
+              class="form-horizontal" role="form" novalidate>
+
+            <div class="col-xs-6">
+
+                <!-- Author email input -->
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label input-label">Author</label>
+                        <div class="col-sm-12">
+                            <input name="author" ng-model="formCtrl.comment.author"
+                                   placeholder="Insert your mail here"
+                                   class="form-control input-width"
+                                   type="email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Score combo box -->
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label input-label">Score</label>
+                        <div class="col-sm-12">
+                            <select name="comboScore" ng-model="formCtrl.comment.score"
+                                    class="form-control input-width" required
+                                    ng-options="score as score.name for score in formCtrl.scores">
+                                <option value="">--- Select an option ---</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text area for comment -->
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label input-label">Comment</label>
+                        <div class="col-sm-12">
+                            <textarea ng-model="formCtrl.comment.text"
+                                      placeholder="What is your opinion about the AngularJS course?"
+                                      class="form-control" required></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit button -->
+                <div class="row">
+                    <button type="submit" value="Submit"                                        
+                            ng-disabled="commentForm.$invalid"
+                            ng-click="commentForm.$setPristine()"
+                            class="btn btn-success col-xs-offset-3 col-xs-2">Submit</button>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div ng-class="{danger: commentForm.$invalid, success: commentForm.$valid}">commentForm.$valid = {{commentForm.$valid}}</div>
+                <div ng-class="{danger: commentForm.$dirty, success: commentForm.$pristine}">commentForm.$pristine = {{commentForm.$pristine}}</div>
+            </div>
+        </form>
+
+    </div>
+</div>
