@@ -1,4 +1,4 @@
-app.directive('message', function($timeout) {
+app.directive('centMessage', function($timeout) {
     
     var link = function(scope, elm, attrs, ctrl) {
 
@@ -27,7 +27,7 @@ app.directive('message', function($timeout) {
     return {
         restrict: 'EA',
         link: link,
-        templateUrl: 'directives/message.html',
+        templateUrl: 'directives/cent-message.html',
         scope: {
             ngModel: '='
         }

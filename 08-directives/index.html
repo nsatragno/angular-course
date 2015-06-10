@@ -5,10 +5,10 @@
         <script src="bower_components/angular/angular.min.js"></script>        
         <script src="form.js"></script>
         <script src="scores.js"></script>
-        <script src="directives/author-input.js"></script>
-        <script src="directives/score-input.js"></script>
-        <script src="directives/text-input.js"></script>
-        <script src="directives/message.js"></script>
+        <script src="directives/cent-author-input.js"></script>
+        <script src="directives/cent-score-input.js"></script>
+        <script src="directives/cent-text-input.js"></script>
+        <script src="directives/cent-message.js"></script>
         
         <!-- CSS includes -->
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
     </head>
     <body ng-controller="FormController as formCtrl" ng-init="formCtrl.init()">
         
-        <message ng-model="formCtrl.messages.info" info></message>
+        <cent-message ng-model="formCtrl.messages.info" info></cent-message>
         
         <h1>Form Example</h1>
         <div class="page-header"></div>
