@@ -5,6 +5,7 @@
         <script src="form.js"></script>
         <script src="scores.js"></script>
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="form.css">
     </head>
     <body ng-controller="FormController as formCtrl" ng-init="formCtrl.init()">
@@ -68,12 +69,14 @@
                             <div class="row">
                                 <button type="submit" value="Submit"                                        
                                         ng-disabled="commentForm.$invalid"
+                                        ng-click="commentForm.$setPristine()"
                                         class="btn btn-success col-xs-offset-3 col-xs-2">Submit</button>
                             </div>
                         </div>
 
                         <div class="col-xs-6">
-                            <div ng-class="{'debug-warning': commentForm.$invalid, 'debug-success': commentForm.$valid}">commentForm.$valid = {{commentForm.$valid}}</div>
+                            <div ng-class="{danger: commentForm.$invalid, success: commentForm.$valid}">commentForm.$valid = {{commentForm.$valid}}</div>
+                            <div ng-class="{danger: commentForm.$dirty, success: commentForm.$pristine}">commentForm.$pristine = {{commentForm.$pristine}}</div>
                         </div>
                     </form>
 
@@ -83,7 +86,7 @@
         
         <div class="page-header"></div>
         
-        <div class="col-xs-12" ng-show="formCtrl.comments">
+        <div class="col-xs-12" ng-show="formCtrl.comments.length">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">All Comments</h3>
@@ -103,7 +106,14 @@
                                 <td ng-bind="comment.score.value" />
                                 <td ng-bind="comment.score.name" />
                                 <td ng-bind="comment.text" />
-                                <td></td>
+                                <td>
+                                    <button class="btn btn-success">
+                                        <i class="fa fa-pencil-square-o"></i>
+                                    </button>
+                                    <button class="btn btn-danger">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>

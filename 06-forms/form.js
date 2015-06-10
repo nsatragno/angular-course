@@ -12,6 +12,7 @@ angular.module('formApp', [])
     
         formCtrl.addComment = function() {            
             formCtrl.comments.push(formCtrl.comment);
+            formCtrl.comment = {};
         };
     
     });

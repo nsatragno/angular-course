@@ -64,6 +64,10 @@ describe('Testing FormController', function() {
             expect(formCtrl.comments[0].score.value).toBe(5);
         });
         
+        it('comment should be cleaned', function() {
+            expect(formCtrl.comment).toEqual({});
+        });
+        
     });
     
 });
