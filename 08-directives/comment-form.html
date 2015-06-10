@@ -14,19 +14,8 @@
 
                 <score-input></score-input>
 
-                <!-- Text area for comment -->
-                <div class="row">
-                    <div class="form-group">
-                        <label class="control-label input-label">Comment</label>
-                        <div class="col-sm-12">
-                            <textarea ng-model="formCtrl.comment.text"
-                                      placeholder="What is your opinion about the AngularJS course?"
-                                      class="form-control" required></textarea>
-                        </div>
-                    </div>
-                </div>
+                <text-input></text-input>
 
-                <!-- Submit button -->
                 <div class="row">
                     <button type="submit" value="Submit"                                        
                             ng-disabled="commentForm.$invalid"
