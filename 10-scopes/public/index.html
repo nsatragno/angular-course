@@ -4,13 +4,107 @@
         <!-- Javascript includes -->
         <script src="lib/angular/angular.min.js"></script>
         <script src="scopes.js"></script>
+        <script src="directives/cent-panel-data.js"></script>
         
         <!-- CSS includes -->
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.min.css">
     </head>
     <body>
-        <p>Hola qué tal</p>
+        
+        <h1>Scopes Example</h1>
+        <div class="page-header"></div>
+        
+        <div class="col-xs-12">
+            <div class="panel panel-default" ng-controller="FatherController">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Father</h3>
+                </div>
+                <div class="panel-body">
+                    
+                    <cent-panel-data></cent-panel-data>
+                    
+                    <div class="col-xs-6">
+                        <div class="panel panel-default" ng-controller="ChildController1">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Child 1</h3>
+                            </div>
+                            <div class="panel-body">
+                                
+                                <cent-panel-data></cent-panel-data>
+                                
+                                <div class="col-xs-12">
+                                    <div class="panel panel-default" ng-controller="GrandChildController1">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Grandchild 1</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            
+                                            <cent-panel-data></cent-panel-data>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="panel panel-default" ng-controller="GrandChildController2">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Grandchild 2</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            
+                                            <cent-panel-data></cent-panel-data>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <div class="panel panel-default" ng-controller="ChildController2">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Child 2</h3>
+                            </div>
+                            <div class="panel-body">
+                                
+                                <cent-panel-data></cent-panel-data>
+                                
+                                <div class="col-xs-12">
+                                    <div class="panel panel-default" ng-controller="GrandChildController3">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Grandchild 3</h3>
+                                        </div>
+                                        <div class="panel-body">
+                                            
+                                            <cent-panel-data></cent-panel-data>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="panel panel-default" ng-controller="GrandChildController4">
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Grandchild 4</h3>
+                                        </div>
+                                        <div class="panel-body">
+
+                                            <cent-panel-data></cent-panel-data>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
         
         <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
     </body>
