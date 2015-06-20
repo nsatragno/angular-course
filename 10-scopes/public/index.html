@@ -5,10 +5,12 @@
         <script src="lib/angular/angular.min.js"></script>
         <script src="scopes.js"></script>
         <script src="directives/cent-panel-data.js"></script>
+        <script src="directives/cent-message.js"></script>
         
         <!-- CSS includes -->
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="lib/components-font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="scopes.css">
     </head>
     <body>
         
@@ -22,6 +24,8 @@
                 </div>
                 <div class="panel-body">
                     
+                    <cent-message ng-model="messages.info" info></cent-message>
+
                     <cent-panel-data></cent-panel-data>
                     
                     <div class="col-xs-6">

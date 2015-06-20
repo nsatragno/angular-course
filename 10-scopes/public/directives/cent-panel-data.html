@@ -1,3 +1,16 @@
 <p>name: {{name}}</p>
 <p>lastName: {{lastName}}</p>
 <p>parent: {{$parent.name}}</p>
+<hr/>
+<div class="col-sm-12">    
+    <p class="col-sm-3">money: {{amount | currency}}</p>
+    <div class="col-sm-3">
+        <i class="fa fa-gift icon-small"></i> {{gifts}}
+    </div>
+    <div class="col-sm-6">
+        <button class="btn btn-default" ng-click="sendGiftToFather()">Send gift to father</button>
+        <button class="btn btn-default" ng-click="sendGiftToChildren()">Send gift to children</button>
+    </div>
+</div>
+<hr/>
+<hr/>
