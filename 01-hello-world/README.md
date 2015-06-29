@@ -1,4 +1,4 @@
-###### Hello World
+# Hello World
 
 Este es el ejemplo más simple del curso. El HelloWorld que podemos encontrar en la página principal de AngularJS.
 
