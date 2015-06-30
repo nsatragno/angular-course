@@ -131,7 +131,7 @@ app.controller('GrandChildController1', function($scope, $log) {
     };
     
     $scope.sendGiftToChildren = function() {
-        $log.error('I does not have children');
+        $log.error('I don\'t have children');
     };
     
 });
@@ -165,7 +165,7 @@ app.controller('GrandChildController2', function($scope, $log) {
     };
     
     $scope.sendGiftToChildren = function() {
-        $log.error('I does not have children');
+        $log.error('I don\'t have children');
     };
     
 });
@@ -199,7 +199,7 @@ app.controller('GrandChildController3', function($scope, $log) {
     };
     
     $scope.sendGiftToChildren = function() {
-        $log.error('I does not have children');
+        $log.error('I don\'t have children');
     };
 });
 
@@ -232,7 +232,7 @@ app.controller('GrandChildController4', function($scope, $log) {
     };
     
     $scope.sendGiftToChildren = function() {
-        $log.error('I does not have children');
+        $log.error('I don\'t have children');
     };
     
 });
