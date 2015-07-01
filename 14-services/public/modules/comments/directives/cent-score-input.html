@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="form-group">
+        <label class="control-label input-label">Score</label>
+        <div class="col-sm-12">
+            <select name="comboScore" ng-model="formCtrl.comment.score"
+                    class="form-control input-width" required
+                    ng-options="score as score.name for score in formCtrl.scores">
+                <option value="">--- Select an option ---</option>
+            </select>
+        </div>
+    </div>
+</div>

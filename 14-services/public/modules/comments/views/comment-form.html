@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Comment Form</h3>
+    </div>
+    <div class="panel-body">
+
+        <form name="commentForm"
+              ng-submit="formCtrl.addComment()"
+              class="form-horizontal" role="form" novalidate>
+
+            <div class="col-xs-6">
+
+                <cent-author-input></cent-author-input>
+
+                <cent-score-input></cent-score-input>
+
+                <cent-text-input></cent-text-input>
+
+                <div class="row">
+                    <button type="submit" value="Submit"                                        
+                            ng-disabled="commentForm.$invalid"
+                            ng-click="commentForm.$setPristine()"
+                            class="btn btn-success col-xs-offset-3 col-xs-2">Submit</button>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div ng-class="{danger: commentForm.$invalid, success: commentForm.$valid}">commentForm.$valid = {{commentForm.$valid}}</div>
+                <div ng-class="{danger: commentForm.$dirty, success: commentForm.$pristine}">commentForm.$pristine = {{commentForm.$pristine}}</div>
+            </div>
+        </form>
+
+    </div>
+</div>
