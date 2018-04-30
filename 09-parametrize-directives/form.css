@@ -1,0 +1,41 @@
+
+.ng-invalid.ng-dirty {
+    border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+    border-color: #78FA89;
+}
+
+@media (min-width: 800px) {
+    .input-width {
+        width: 50%;
+    }
+}
+
+@media (max-width: 799px) {
+    .input-width {
+        width: 100%;
+    }
+}
+
+.input-label {
+    padding-left: 15px;
+}
+
+.danger {
+    color: red
+}
+
+.success {
+    color: green
+}
+
+.alert-floating {
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+	right:10%;
+	left: 10%;
+	top: 51px;
+}

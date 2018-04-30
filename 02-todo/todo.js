@@ -1,9 +1,9 @@
 angular.module('todoApp', [])
 
-    .controller('TodoListController', function() {
+    .controller('TodoListController', function($scope) {
     
         var todoList = this;
-    
+
         todoList.todos = [
             { text: 'learn angular', done: true },
             { text: 'build an angular app', done: false }];

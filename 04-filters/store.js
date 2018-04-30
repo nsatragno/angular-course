@@ -5,9 +5,9 @@ angular.module('filtersApp', [])
         var store = this;
     
         store.products = [
-            { name: 'The Dark Knight', price: 282.80 },
-            { name: 'Interestellar', price: 312.99 },
-            { name: 'Inception', price: 150 }
+            { name: 'The Dark Knight', price: 282.80, img: "http://vignette4.wikia.nocookie.net/doblaje/images/9/9c/Batman_el_Caballero_de_la_Noche.png/revision/latest?cb=20110602012240&path-prefix=es" },
+            { name: 'Interestellar <a></a>', price: 312.999, img: "https://lh6.googleusercontent.com/-EvzMz5PfB4k/U2kZcou_QEI/AAAAAAAAAq4/Sb18arIGhXU/s500-no/Interstellar_Social_Icon_v2.jpg" },
+            { name: 'Inception', price: 150, img: "http://t2.gstatic.com/images?q=tbn:ANd9GcRo9vfJCM6dzPkZHIHBVCtlJnAnew9Ai26kEdrli0-tfmatmciD" }
         ];    
 
         store.now = new Date();

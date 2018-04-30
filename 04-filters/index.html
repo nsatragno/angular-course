@@ -1,6 +1,7 @@
 <!doctype html>
 <html ng-app="filtersApp">
     <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"> 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>        
         <script src="store.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -43,12 +44,21 @@
         </ul>
         
         <ul class="list-group" ng-show="storeCtrl.isTabSelected('movies')">
-            <li class="list-group-item" ng-repeat="product in storeCtrl.products | orderBy:'-price'">
+          <li class="list-group-item" ng-click="storeCtrl.selectedProduct = product" ng-repeat="product in storeCtrl.products | orderBy:'-price'">
                 <h3>
                     {{product.name}}
                     <em class="pull-right">{{ product.price | currency }}</em>
+                    <div ng-show="storeCtrl.selectedProduct == product">
+                      Seleccionado!
+                    </div>
                 </h3>
             </li>
+
+            <div ng-show="storeCtrl.selectedProduct">
+              <p>Detalle de la película: {{storeCtrl.selectedProduct.name}}</p>
+              <p>Precio: {{storeCtrl.selectedProduct.price | currency}}</p>
+              <p>Foto: <img ng-src="{{storeCtrl.selectedProduct.img}}" /></p>
+            </div>
         </ul>
         
         <div ng-show="storeCtrl.isTabSelected('frog')">
